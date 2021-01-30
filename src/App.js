@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './App.css'
+import Heading from './components/Header/Header'
+import SearchBar from './components/SearchBar/SearchBar'
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+import {Row, Col} from 'react-bootstrap';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+
+  render() {
+    return (
+      <React.Fragment>
+        <Heading firstName={"John"} />
+        <div>
+          <div>
+            <SearchBar /> 
+          </div>
+          <div style={{"float": "left"}}>
+            <Button variant="contained" color="primary">Search</Button>
+          </div>
+        </div>
+      </React.Fragment>
+    )
+  }
+
 }
 
 export default App;
