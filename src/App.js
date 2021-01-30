@@ -6,6 +6,10 @@ import axios from 'axios'
 
 class App extends React.Component {
 
+  constructor(props){
+    super(props)
+    this.fetchAPI = this.fetchAPI.bind(this)
+  }
   state = {
     firstName: "",
     lastName: "",
@@ -16,10 +20,9 @@ class App extends React.Component {
   }
 
   fetchAPI(){
-    let APIkey = "33ba6a50df2537ca158f0524def69053"
+    let APIkey = ""
     const weather = `https://api.openweathermap.org/data/2.5/weather?q=${this.state.cityName}&APPID=${APIkey}&units=metric`;
     axios.get(weather)
-    that = this
     .then(function (res) {
       // handle success
       this.setState({response: res})
