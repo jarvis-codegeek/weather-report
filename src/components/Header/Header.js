@@ -3,8 +3,7 @@ import React from 'react';
 const Heading = (props) => {
     return(
         <React.Fragment>
-        <h3>Hi !!!! Welcome {props.firstName} {props.lastName}</h3>
-        {SubTitle}
+        <h3>Hi !!!! Welcome to {props.title}</h3>
         </React.Fragment>        
     )
 }

@@ -36,7 +36,7 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-          <Heading firstName={"John"} lastName={'David'}/>
+          <Heading title = {"Weather Report"}/>
           <SearchBar fetchAPI = {this.fetchAPI} />
           <SubTitle />
       </React.Fragment>
