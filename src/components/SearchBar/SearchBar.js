@@ -41,8 +41,9 @@ const SearchBar = (props) => {
               id="city"
               freeSolo
               options={cityList.map((city) => city.name)}
+              onSelect={props.getCityName}
               renderInput={(params) => (
-                <TextField {...params} label="Enter City...." margin="normal" variant="outlined" />
+                <TextField {...params} label="Enter City...." margin="normal"  onChange={props.getCityName} variant="outlined" />
               )}
             />
           
